@@ -1,0 +1,16 @@
+.blueBox{
+    background-color: lightcyan;
+    color: blue;
+    border: 2px solid blue;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 400px;
+}
+.redBox{
+    background-color: rgb(237, 212, 212);
+    color: red;
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 400px;
+}

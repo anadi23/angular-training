@@ -1,0 +1,14 @@
+<div [class]='classToUse'>
+    <h3>{{ firstName }} {{ lastName }}</h3>
+    <h3>Annual Salary: {{ salary * 12 }}</h3>
+    <h3 [innerHTML]='getFullName()'></h3> 
+</div>
+<br />
+<button (click)='changeTheme()'>Click To Change Theme</button>
+<br />
+<hr />
+<br />
+{{ valueToChange }}
+<br />
+<input type='text'
+       [(ngModel)]='valueToChange' />
