@@ -11,6 +11,7 @@ import { DataComponent } from './components/data/data.component';
 import { SalaryTaxPipe } from './pipe/salary-tax.pipe';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { Testing222Component } from './components/testing222/testing222.component';
 
 //Decorator
 @NgModule({
@@ -20,7 +21,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     TestingComponent, 
     BindingComponent, 
     DataComponent, 
-    SalaryTaxPipe, ContactComponent, ContactsComponent
+    SalaryTaxPipe, ContactComponent, ContactsComponent, Testing222Component
   ],
   imports: [                  // Modules
     BrowserModule,

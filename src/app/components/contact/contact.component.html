@@ -1,6 +1,8 @@
 <div class='divBox'>
-    <h3>{{ name }}</h3>
+    <h3>{{ title }} {{ name }}</h3>
     <hr />
     <h5>Mobile: {{ mobile }}</h5>
     <h5>Email Id: {{ email }}</h5>
+    <hr />
+    <input type='checkbox' [checked]='contacted' />Contacted
 </div>
