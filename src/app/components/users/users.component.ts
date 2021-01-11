@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SampleService } from 'src/app/services/sample.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-users',
@@ -7,12 +7,15 @@ import { SampleService } from 'src/app/services/sample.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  msg: string;
-  constructor(private service: SampleService) { 
-    this.msg = this.service.sayHello("Anadi");
+  users: any;
+  constructor(private service: DataService) { 
+    this.users = [];
   }
 
   ngOnInit(): void {
+    this.service.getUsers().subscribe(response => {
+      this.users = response;
+    });
   }
 
 }
