@@ -11,7 +11,7 @@ export class ContactComponent implements OnInit, OnChanges {
   @Input() email: string;
   @Input() mobile: string;
   @Input() gender: string;
-  @Input() contacted: boolean;
+  @Input() contacted?: boolean;
   title: string;
   constructor() {
     this.id = 0; 
