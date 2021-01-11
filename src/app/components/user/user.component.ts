@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { DataService } from 'src/app/services/data.service';
-
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -10,7 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class UserComponent implements OnInit {
   user: User;
-  constructor(private service: DataService) { 
+  constructor(private service: DataService, private route: ActivatedRoute) { 
     this.user = {
       id: 0,
       name: '',
@@ -19,9 +18,9 @@ export class UserComponent implements OnInit {
       phone: ''
     };
   }
-
   ngOnInit(): void {
-    this.service.getUserById(3).subscribe(response => {
+    let id = this.route.snapshot.params['id'];
+    this.service.getUserById(id).subscribe(response => {
       this.user = response;
     })
   }
