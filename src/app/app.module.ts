@@ -15,6 +15,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { Testing222Component } from './components/testing222/testing222.component';
 import { Testing223Component } from './components/testing223/testing223.component';
 import { UsersComponent } from './components/users/users.component';
+import { UserComponent } from './components/user/user.component';
 
 //Decorator
 @NgModule({
@@ -29,7 +30,7 @@ import { UsersComponent } from './components/users/users.component';
     ContactsComponent, 
     Testing222Component, 
     Testing223Component, 
-    UsersComponent
+    UsersComponent, UserComponent
   ],
   imports: [                  // Modules
     BrowserModule,
