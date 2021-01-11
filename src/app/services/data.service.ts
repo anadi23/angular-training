@@ -12,7 +12,9 @@ export class DataService {
     this.baseUri = 'http://jsonplaceholder.typicode.com/users/';
   }
   getUsers(): Observable<User[]>{
-    return this.http.get<User[]>(this.baseUri);
+    return this.http.get<User[]>(this.baseUri, {
+      
+    });
   }
   getUserById(id: number): Observable<User>{
     return this.http.get<User>(this.baseUri + id);

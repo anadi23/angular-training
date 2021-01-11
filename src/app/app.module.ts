@@ -16,6 +16,7 @@ import { Testing222Component } from './components/testing222/testing222.componen
 import { Testing223Component } from './components/testing223/testing223.component';
 import { UsersComponent } from './components/users/users.component';
 import { UserComponent } from './components/user/user.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 //Decorator
 @NgModule({
@@ -30,7 +31,7 @@ import { UserComponent } from './components/user/user.component';
     ContactsComponent, 
     Testing222Component, 
     Testing223Component, 
-    UsersComponent, UserComponent
+    UsersComponent, UserComponent, PageNotFoundComponent
   ],
   imports: [                  // Modules
     BrowserModule,
