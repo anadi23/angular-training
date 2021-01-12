@@ -33,7 +33,7 @@ import { LoginComponent } from './components/login/login.component';
     Testing222Component, 
     Testing223Component, 
     UsersComponent, UserComponent, PageNotFoundComponent, LoginComponent
-  ],
+    ],
   imports: [                  // Modules
     BrowserModule,
     AppRoutingModule,

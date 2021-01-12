@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { BindingComponent } from './components/binding/binding.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -12,11 +12,12 @@ const routes: Routes = [
   {path: 'contacts', component: ContactsComponent},
   {path: 'users', component: UsersComponent, canActivate: [LoginRouteGuardService]},
   {path: 'users/:id', component: UserComponent, canActivate: [LoginRouteGuardService]},
+  {path: 'products', loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule)},
   {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
