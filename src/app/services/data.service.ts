@@ -19,4 +19,7 @@ export class DataService {
   getUserById(id: number): Observable<User>{
     return this.http.get<User>(this.baseUri + id);
   }
+  addUser(user: User): Observable<User>{
+    return this.http.post<User>(this.baseUri, user);
+  }
 }

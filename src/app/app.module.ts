@@ -18,6 +18,7 @@ import { UsersComponent } from './components/users/users.component';
 import { UserComponent } from './components/user/user.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
+import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
 
 //Decorator
 @NgModule({
@@ -32,7 +33,7 @@ import { LoginComponent } from './components/login/login.component';
     ContactsComponent, 
     Testing222Component, 
     Testing223Component, 
-    UsersComponent, UserComponent, PageNotFoundComponent, LoginComponent
+    UsersComponent, UserComponent, PageNotFoundComponent, LoginComponent, TemplateDrivenFormComponent
     ],
   imports: [                  // Modules
     BrowserModule,
