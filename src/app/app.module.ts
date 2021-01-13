@@ -19,6 +19,7 @@ import { UserComponent } from './components/user/user.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 //Decorator
 @NgModule({
@@ -33,7 +34,7 @@ import { TemplateDrivenFormComponent } from './components/template-driven-form/t
     ContactsComponent, 
     Testing222Component, 
     Testing223Component, 
-    UsersComponent, UserComponent, PageNotFoundComponent, LoginComponent, TemplateDrivenFormComponent
+    UsersComponent, UserComponent, PageNotFoundComponent, LoginComponent, TemplateDrivenFormComponent, ReactiveFormComponent
     ],
   imports: [                  // Modules
     BrowserModule,

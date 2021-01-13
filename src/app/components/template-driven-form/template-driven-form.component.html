@@ -1,3 +1,4 @@
+<h2>Template Driven Form</h2>
 <div style="width: 500px; padding: 20px; margin: 20px; border: 2px solid blue; border-radius: 20px;">
     <form #tvForm='ngForm' (submit)='submitForm(tvForm.value)'>
         <div class="form-group">
@@ -17,7 +18,14 @@
                 class='form-control'
                 ngModel
                 #tvname='ngModel'
-                (input)='log(tvname)' />
+                (input)='log(tvname)'
+                required
+                minlength="3"
+                maxlength="20" />
+            <div *ngIf="tvname.errors && tvname.touched" class="alert alert-danger">
+                <div *ngIf="tvname.errors.required">Name is mandatory</div>
+                <div *ngIf="tvname.errors.minlength">Name must at least have 3 characters</div>
+            </div>
         </div>
         <div class="form-group">
             <label>User Name</label>
@@ -47,7 +55,7 @@
                 #tvphone='ngModel' />
         </div>
         <div>
-            <button class='btn btn-primary'>Submit</button>
+            <button class='btn btn-primary' [disabled]='tvForm.invalid'>Submit</button>
         </div>
     </form>
 </div>
