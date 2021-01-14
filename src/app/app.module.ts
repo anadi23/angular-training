@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
 import { ParentComponent } from './components/parent/parent.component';
 import { SenderComponent } from './components/sender/sender.component';
 import { ReceiverComponent } from './components/receiver/receiver.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Decorator
 @NgModule({
@@ -45,7 +47,9 @@ import { ReceiverComponent } from './components/receiver/receiver.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],              // Services
   bootstrap: [AppComponent]   // Component

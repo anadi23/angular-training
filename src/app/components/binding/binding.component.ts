@@ -11,12 +11,14 @@ export class BindingComponent implements OnInit {
   salary: number;
   classToUse: string;
   valueToChange: string;
+  imgpath: string;
   constructor() { 
     this.firstName = "Anand";
     this.lastName = "Sharma";
     this.salary = 50000;
     this.classToUse = 'blueBox';
     this.valueToChange = "This is initial value";
+    this.imgpath = 'assets/shivling.jpg';
   }
   getFullName(): string{
     //return this.firstName + ' ' + this.lastName;
