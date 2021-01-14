@@ -18,6 +18,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { LoginComponent } from './components/login/login.component';
 import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { SenderComponent } from './components/sender/sender.component';
+import { ReceiverComponent } from './components/receiver/receiver.component';
 
 //Decorator
 @NgModule({
@@ -35,7 +38,7 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
     PageNotFoundComponent, 
     LoginComponent, 
     TemplateDrivenFormComponent, 
-    ReactiveFormComponent
+    ReactiveFormComponent, ParentComponent, SenderComponent, ReceiverComponent
     ],
   imports: [                  // Modules
     BrowserModule,

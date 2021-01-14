@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
 
@@ -9,7 +9,9 @@ import { User } from 'src/app/models/user';
 })
 export class ReactiveFormComponent implements OnInit {
   form: FormGroup;
+  @Output() send: EventEmitter<User>;
   constructor(private builder: FormBuilder) { 
+    this.send = new EventEmitter<User>();
     this.form = this.builder.group({
       'id': ['', Validators.required],
       'name': ['', Validators.compose([Validators.required, Validators.minLength(3)])],
@@ -19,7 +21,8 @@ export class ReactiveFormComponent implements OnInit {
     });
   }
   submitForm(user: User){
-    alert(JSON.stringify(user));
+    this.send.emit(user);
+    //alert(JSON.stringify(user));
   }
   ngOnInit(): void {
   }

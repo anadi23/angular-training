@@ -1,0 +1,7 @@
+<h3>Form Data</h3>
+<h4>Name: {{ user.name }}</h4>
+<h4>User Name: {{ user.username }}</h4>
+<h4>Email: {{ user.email }}</h4>
+<h4>Phone: {{ user.phone }}</h4>
+<hr />
+<app-reactive-form (send)='getValue($event)'></app-reactive-form>

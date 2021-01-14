@@ -9,9 +9,10 @@ export class FormRouteGuardService implements CanDeactivate<ReactiveFormComponen
 
   constructor() { }
   canDeactivate(rform: ReactiveFormComponent){
-    if(rform.form.dirty)
+    if(rform.form && rform.form.dirty)
+    {
       return confirm("Are you sure to leave this form incomplete?");
-    
+    }
     return true;
   }
 }
